@@ -1,0 +1,23 @@
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  const notification = document.getElementById('notification');
+  if (notification) {
+    notification.classList.add('show');
+    notification.style.animation = 'slideIn 0.3s, pulse 0.2s';
+    setTimeout(() => {
+      notification.classList.remove('show');
+      notification.style.animation = '';
+    }, 2000);
+  }
+}
+
+function showPopup(id) {
+  const popup = document.getElementById(id);
+  popup.classList.add('show');
+  popup.style.animation = 'fadeIn 0.3s, pulse 0.2s';
+  setTimeout(() => popup.style.animation = '', 500);
+}
+
+function closePopup(id) {
+  document.getElementById(id).classList.remove('show');
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navegació en curs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+    }
+    .map-container {
+      height: 65vh;
+      background: url('https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/2.1747,41.4036,14/393x500?access_token=pk.eyJ1IjoieWFnb2lzYXNpIiwiYSI6ImNsc3Brc3p5czA0aWoya3Brc3p5czA0aW8ifQ.3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z') center/cover no-repeat;
+    }
+    .guidance {
+      padding: 1rem;
+      font-size: 1.2rem;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .guidance i {
+      font-size: 1.5rem;
+      animation: pulse 1.5s infinite;
+      color: #00ff99;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .progress {
+      height: 6px;
+      background: #555;
+      margin: 0;
+    }
+    .progress-bar {
+      width: 40%;
+      height: 100%;
+      background: #00cc88;
+    }
+    .stop-button {
+      width: 100%;
+      padding: 1rem;
+      background-color: #cc3333;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+    }
+    .stop-button:hover {
+      background-color: #aa2222;
+    }
+  </style>
+</head>
+<body>
+  <div class="map-container"></div>
+  <div class="guidance">
+    <i class="fas fa-volume-up"></i>
+    Gira a l'esquerra en 100 metres
+  </div>
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+  <button class="stop-button" onclick="window.location.href='home-dark.html'">
+    Atura navegació
+  </button>
+</body>
+</html>

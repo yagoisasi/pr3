@@ -1,0 +1,116 @@
+/* Estils globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5; /* backcolour: RGB(242, 242, 235) */
+  color: #333;
+  transition: background-color 0.4s, color 0.4s;
+}
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.header {
+  background-color: #0066cc; /* headerblue: RGB(0, 102, 204) */
+  color: white;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.container {
+  padding: 2rem;
+  flex: 1;
+}
+.back {
+  font-size: 1.2rem;
+  color: #0066cc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.button {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #0055aa;
+}
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.input-field:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+.notification {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00cc00; /* codegreen: RGB(0, 153, 0) */
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s;
+}
+.notification.show {
+  display: block;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  animation: fadeIn 0.3s;
+}
+.dark-mode .popup {
+  background-color: #333;
+  color: white;
+}
+.popup.show {
+  display: block;
+}
+@keyframes slideIn {
+  from { transform: translate(-50%, -100%); }
+  to { transform: translate(-50%, 0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyWay - Inici</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .map-placeholder {
+      flex: 1;
+      background: url('https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.1747,41.4036,14/393x500?access_token=pk.eyJ1IjoieWFnb2lzYXNpIiwiYSI6ImNsc3Brc3p5czA0aWoya3Brc3p5czA0aW8ifQ.3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z') center/cover no-repeat;
+      position: relative;
+    }
+    .quick-button {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      padding: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .dark-mode .quick-button {
+      background-color: #333;
+      color: white;
+    }
+    .quick-button:hover {
+      transform: scale(1.1);
+    }
+    .search-area {
+      padding: 1.5rem;
+      background-color: #ffffff;
+      box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode .search-area {
+      background-color: #333;
+    }
+    .input-container {
+      position: relative;
+    }
+    .voice-input {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .filter-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <h1>MyWay</h1>
+      <a href="settings.html" class="settings"><i class="fas fa-cog"></i></a>
+    </div>
+    <div class="map-placeholder">
+      <a href="dark-mode-confirm.html" class="quick-button" onclick="toggleDarkMode()"><i class="fas fa-moon"></i></a>
+    </div>
+    <div class="search-area">
+      <div class="input-container">
+        <input type="text" class="input-field" placeholder="Origen (ex: Poble Nou)" aria-label="Origen">
+        <span class="voice-input" title="Entrada de veu"><i class="fas fa-microphone"></i></span>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input-field" placeholder="Destinació (ex: Plaça Catalunya)" aria-label="Destinació">
+        <span class="voice-input" title="Entrada de veu"><i class="fas fa-microphone"></i></span>
+      </div>
+      <a href="accessible-filters.html" class="button filter-button"><i class="fas fa-wheelchair"></i> Filtres d'accessibilitat</a>
+    </div>
+    <div class="notification" id="notification">Mode fosc activat</div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
