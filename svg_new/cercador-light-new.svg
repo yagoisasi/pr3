@@ -1,0 +1,49 @@
+<svg width="360" height="640" viewBox="0 0 360 640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="360" height="640" fill="#FFFFFF"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="360" height="60" fill="#F5F5F5"/>
+  <text x="20" y="40" font-family="Arial" font-size="16" fill="#333333">9:41</text>
+  <path d="M300 30 h10 v10 h-10 z" fill="#333333"/> <!-- Signal icon -->
+  <path d="M330 30 h20 v10 h-20 z" fill="#333333"/> <!-- Battery icon -->
+
+  <!-- Search Bar -->
+  <rect x="20" y="70" width="320" height="40" rx="20" fill="#E0E0E0"/>
+  <text x="40" y="95" font-family="Arial" font-size="16" fill="#333333">Poble Nou a Plaça Catalunya</text>
+  <circle cx="310" cy="90" r="15" fill="#4A90E2"/>
+  <path d="M305 85 h10 v10 h-10 z" fill="#FFFFFF"/> <!-- Voice icon -->
+
+  <!-- Accessibility Filters -->
+  <text x="20" y="130" font-family="Arial" font-size="16" fill="#333333">Filtres</text>
+  <rect x="20" y="150" width="120" height="40" rx="20" fill="#4A90E2"/>
+  <text x="30" y="175" font-family="Arial" font-size="14" fill="#FFFFFF">Ruta accessible</text>
+  <rect x="160" y="150" width="100" height="40" rx="20" fill="#D3D3D3"/>
+  <text x="170" y="175" font-family="Arial" font-size="14" fill="#333333">Ascensors</text>
+
+  <!-- Map -->
+  <rect x="20" y="200" width="320" height="200" fill="#E0E0E0"/>
+  <rect x="20" y="200" width="100" height="200" fill="#ADD8E6"/> <!-- Water -->
+  <rect x="120" y="230" width="80" height="60" fill="#90EE90"/> <!-- Park -->
+  <text x="40" y="220" font-family="Arial" font-size="12" fill="#333333">Barcelona</text>
+  <circle cx="200" cy="280" r="5" fill="#FF0000"/> <!-- Pin (Poble Nou) -->
+  <text x="210" y="285" font-family="Arial" font-size="10" fill="#333333">Poble Nou</text>
+  <circle cx="250" cy="350" r="5" fill="#FF0000"/> <!-- Pin (Plaça Catalunya) -->
+  <text x="260" y="355" font-family="Arial" font-size="10" fill="#333333">Plaça Catalunya</text>
+  <path d="M200 280 L250 350" stroke="#4A90E2" stroke-width="2" stroke-dasharray="5,5"/> <!-- Route line -->
+  <rect x="220" y="285" width="10" height="15" fill="#333333"/> <!-- Elevator icon -->
+  <circle cx="230" cy="290" r="3" fill="#00FF00"/> <!-- Elevator status (green = operational) -->
+
+  <!-- Mode Toggle (Moon Icon) -->
+  <circle cx="320" cy="420" r="20" fill="#4A90E2"/>
+  <path d="M315 410 A15 15 0 0 1 325 430 A15 15 0 0 1 315 410 Z" fill="#FFFFFF"/> <!-- Moon icon -->
+
+  <!-- Bottom Navigation -->
+  <rect x="0" y="580" width="360" height="60" fill="#F5F5F5"/>
+  <circle cx="60" cy="610" r="20" fill="#4A90E2"/>
+  <text x="55" y="615" font-family="Arial" font-size="12" fill="#FFFFFF">Rutes</text>
+  <circle cx="180" cy="610" r="20" fill="#D3D3D3"/>
+  <text x="175" y="615" font-family="Arial" font-size="12" fill="#333333">Alertes</text>
+  <circle cx="300" cy="610" r="20" fill="#D3D3D3"/>
+  <text x="295" y="615" font-family="Arial" font-size="12" fill="#333333">Perfil</text>
+</svg>
